@@ -17,7 +17,7 @@ socketio = SocketIO(app, transport='websocket')
 @socketio.on('message')
 def message(n):
     job = q.enqueue('fibo.fib', n, job_id=str(n), result_ttl=86400)
-    while not job.result:
+    while job.result == None:
         job.refresh()
     emit('response', str(job.result))
 
