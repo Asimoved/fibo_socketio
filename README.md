@@ -12,7 +12,8 @@ Advantages:
 
 - git
 - docker
-- socketio (python-socketio for the client)
+- python-socketio (for the client: pip install python-socketio)
+- websocket-client (for websocket connection and not just polling: pip install websocket-client)
 
 ## Installation
 
